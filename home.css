@@ -1,0 +1,18 @@
+.container-fluid {
+    background-color: beige;
+}
+
+.heading {
+    text-align: center;
+    font-family:"Roboto";
+    font-size:30px;
+}
+
+.image {
+    height: 750px;
+    width: 100%;
+    background-image: url("image.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
