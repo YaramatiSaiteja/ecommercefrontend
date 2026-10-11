@@ -1,18 +1,25 @@
-.container-fluid {
-    background-color: beige;
-}
-
 .heading {
-    text-align: center;
     font-family:"Roboto";
-    font-size:30px;
+    font-size:40px;
+    font-weight:600;
 }
 
-.image {
-    height: 750px;
+.container-fluid {
+    height: 765px;
     width: 100%;
     background-image: url("image.png");
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color:gold;
+}
+
+.description {
+    font-family:"sans-serif";
+    width:auto;
+    font-size:20px;
+    font-weight:400;
 }
