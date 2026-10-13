@@ -1,38 +1,49 @@
-.heading {
-    font-family: "Roboto", sans-serif;
-    font-size: 40px;
-    font-weight: 600;
+
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-.hero-section {
-    min-height: 765px;
+html,
+body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    background-image: url("image.png");
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
-    padding: 60px 32px;
 }
 
-.description {
+body {
     font-family: Arial, sans-serif;
-    max-width: 700px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.6;
 }
+
+
+/* =========================
+   Navbar
+========================= */
 
 .shopease-navbar {
     padding: 14px 32px;
-    background-color: #fff;
-    border-bottom: 1px solid #f0e7df;
+    min-height: 86px;
+    background-color: #343a40;
+    border-bottom: 1px solid #555;
 }
 
 .shopease-navbar .navbar-brand {
-    color: white;
+    color: #ffffff;
     font-size: 25px;
     font-weight: 700;
     letter-spacing: -0.5px;
+}
+
+.shopease-navbar .navbar-brand:hover {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.shopease-navbar .navbar-brand span {
+    color: #f07832;
 }
 
 .brand-accent {
@@ -42,30 +53,276 @@
 .shopease-navbar .navbar-nav .nav-link {
     color: goldenrod;
     font-weight: 500;
+    font-size: 17px;
     margin-left: 16px;
     transition: color 0.2s ease;
 }
 
-.shopease-navbar .navbar-nav .nav-link:hover {
+.shopease-navbar .navbar-nav .nav-link:hover,
+.shopease-navbar .navbar-nav .nav-link:focus {
     color: #f07832;
 }
 
-@media (max-width: 576px) {
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 765px;
+    padding: 60px 4.6%;
+
+    background-image: url("home.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 55%;
+    max-width: 780px;
+}
+
+
+/* =========================
+   Hero Eyebrow Text
+========================= */
+
+.eyebrow {
+    margin-bottom: 20px;
+    color: #343434;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.eyebrow span {
+    margin: 0 8px;
+}
+
+
+/* =========================
+   Main Heading
+========================= */
+
+.heading {
+    margin-bottom: 30px;
+    color: #252525;
+
+    font-family: "Roboto", Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.heading span {
+    color: #e96627;
+}
+
+
+/* =========================
+   Description
+========================= */
+
+.description {
+    max-width: 650px;
+    margin-bottom: 26px;
+
+    color: #555555;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Shop Now Button
+========================= */
+
+.shop-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    min-width: 220px;
+    padding: 16px 24px;
+
+    background-color: #ed6726;
+    border: 1px solid #ed6726;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.shop-button:hover {
+    background-color: #d95519;
+    border-color: #d95519;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.shop-button span {
+    font-size: 27px;
+    line-height: 1;
+}
+
+
+/* =========================
+   Feature Highlights
+========================= */
+
+.features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    margin-top: 38px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #242424;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.feature + .feature {
+    padding-left: 24px;
+    border-left: 1px solid #d8cfc4;
+}
+
+.feature-icon {
+    font-size: 28px;
+}
+
+
+/* =========================
+   Tablet Responsive Design
+========================= */
+
+@media (max-width: 768px) {
     .shopease-navbar {
-        padding: 10px 16px;
+        padding: 12px 20px;
     }
 
     .hero-section {
-        min-height: 600px;
-        padding: 40px 16px;
-        background-position: 60% center;
+        min-height: 700px;
+        padding: 45px 24px;
+        background-position: 62% center;
+    }
+
+    .hero-content {
+        width: 70%;
     }
 
     .heading {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .description {
         font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .features {
+        gap: 16px;
+    }
+
+    .feature + .feature {
+        padding-left: 12px;
+    }
+}
+
+
+/* =========================
+   Mobile Responsive Design
+========================= */
+
+@media (max-width: 576px) {
+    .shopease-navbar {
+        padding: 10px 16px;
+        min-height: auto;
+    }
+
+    .shopease-navbar .navbar-brand {
+        font-size: 23px;
+    }
+
+    .shopease-navbar .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero-section {
+        min-height: 700px;
+        padding: 35px 16px;
+        align-items: flex-start;
+
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        margin-bottom: 16px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .description {
+        margin-bottom: 22px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .shop-button {
+        min-width: 190px;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    .features {
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .feature {
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .feature + .feature {
+        padding-left: 10px;
+    }
+
+    .feature-icon {
+        font-size: 23px;
     }
 }
