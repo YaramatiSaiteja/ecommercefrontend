@@ -1,5 +1,8 @@
+let message = document.getElementById("message");
+
 let signupBtn = document.getElementById("signupBtn");
 signupBtn.addEventListener("click", function() {
+    message.textContent = "Account created successfully!";
     window.location.href = "login.html";
 });
 
@@ -33,3 +36,4 @@ passwordInput.addEventListener("blur", function() {
         passwordError.textContent = "";
     }
 });
+

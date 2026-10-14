@@ -1,13 +1,17 @@
+let message = document.getElementById("message");
 let loginBtn = document.getElementById("loginBtn");
 let backBtn = document.getElementById("backBtn");
 let usernameInput = document.getElementById("username");
 let passwordInput = document.getElementById("password");
 
-loginBtn.addEventListener("click", function() {
+loginBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    message.textContent = "Login successful!";
     window.location.href = "home.html";
 });
 
-backBtn.addEventListener("click", function() {
+backBtn.addEventListener("click", function(event) {
+    event.preventDefault();
     window.location.href = "home.html";
 });
 
