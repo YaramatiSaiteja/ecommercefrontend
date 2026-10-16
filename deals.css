@@ -1,0 +1,32 @@
+
+/* Keep the carousel consistent */
+#carouselExampleControls {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Make every carousel image the same size */
+#carouselExampleControls .carousel-item img {
+    width: 100vw;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Responsive height for mobile screens */
+@media (max-width: 768px) {
+    #carouselExampleControls .carousel-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    #carouselExampleControls .carousel-item img {
+        height: 180px;
+    }
+}
+
+.container{
+    background-color:antiquewhite
+}
