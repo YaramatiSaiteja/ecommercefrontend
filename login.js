@@ -35,11 +35,13 @@ loginForm.addEventListener("submit",function(event){
         return;
     }
 
-    window.location.href = "products.html";
-
     message.textContent = "Login successful!";
     
     loginForm.reset();
+
+    setTimeout(() => {
+        window.location.href = "products.html";
+    }, 500);
 });
 
 
